@@ -1,0 +1,11 @@
+let playerName='Mario';
+let currentLives =3;
+const level1=25;
+const level2=30;
+const level3=45;
+const total=level1 + level2 + level3;
+const trungBinh= total/3;
+const soDu=total%3;
+console.log(total);
+console.log(trungBinh);
+console.log(`Số coin dư là ${soDu}`);

@@ -1,0 +1,67 @@
+- form
+   - div
+     - label
+     - input
+   - div
+     - label
+     - input
+   - div
+     - label
+     - div
+        - div
+           - input
+           - label
+        - div
+           - input
+           - label
+   - div
+      - label
+      - div
+         - div
+            - input
+            - label
+         - div
+            - input
+            - label
+         - div
+            - input
+            - label
+   - div
+      - button
+
+
+
+
+// ////////////////////////////////////////////////
+DOM chi tiết hơn:
+
+- form
+   - div (Username group)
+     - label
+     - input[text]
+   - div (Email group)
+     - label
+     - input[email]
+   - div (Gender group)
+     - label
+     - div (flex container)
+        - div
+           - input[radio] male
+           - label
+        - div
+           - input[radio] female
+           - label
+   - div (Hobbies group)
+      - label
+      - div (flex-wrap container)
+         - div
+            - input[checkbox] reading
+            - label
+         - div
+            - input[checkbox] traveling
+            - label
+         - div
+            - input[checkbox] cooking
+            - label
+   - div (Submit group)
+      - button

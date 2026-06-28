@@ -1,0 +1,8 @@
+a. Chạy lệnh git init => khởi tạo tạo 3 vùng: Working Directory, Staging Area, Repository
+b. Tạo file file1.txt, file2.txt, oops/file3.txt => các file và thư mục này thuộc vùng Working Directory
+c. Thêm file .gitignore, thêm vào 2 dòng:
+  i. file1.txt
+  ii. oops/
+=> file1.txt và folder oops/ sẽ bị bỏ qua, không được theo dõi bởi Git
+d. Chạy lệnh: git add . => đưa file2.txt vào vùng Staging Area
+e. Chạy lệnh: git commit -m"init project" => commit file2.txt vào vùng Repository với tên phiên bản là 'init project'

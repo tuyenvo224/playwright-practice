@@ -1,0 +1,101 @@
+https://material.playwrightvn.com/09-xpath-descendant-or-self.html
+
+Ví dụ về XPath Axe Methods: descendant và descendant-or-self
+
+1. descendant
+Chọn tất cả hậu duệ (con, cháu, ...) của nút hiện tại:
+
+Ví dụ 1
+XPath: //div[@id='parent1']/descendant::div
+
+HTML:
+
+<div id="parent1">
+    <div id="child1">Nội dung 1</div>
+    <div id="child2">Nội dung 2</div>
+</div>
+
+Trả lời:  Chọn các phần tử div có id="child1" và id="child2"
+
+/---------
+
+Ví dụ 2
+XPath: //div[@id='grandparent2']/descendant::span
+
+HTML:
+
+<div id="grandparent2">
+    <div id="parent2">
+        <span id="child2-1">Nội dung 2-1</span>
+        <span id="child2-2">Nội dung 2-2</span>
+    </div>
+</div>
+
+Trả lời: Chọn các phần tử span có id="child2-1" và id="child2-2"
+
+/--------
+
+Ví dụ 3
+XPath: //div[@id='grandparent3']/descendant::p
+
+HTML:
+
+<div id="grandparent3">
+    <div id="parent3">
+        <p id="child3-1">Nội dung 3-1</p>
+        <p id="child3-2">Nội dung 3-2</p>
+    </div>
+</div>
+
+Trả lời: Chọn các phần tử p có id="child3-1" và id="child3-2"
+
+/-------
+
+2. descendant-or-self
+Chọn tất cả hậu duệ và chính nút hiện tại:
+
+Ví dụ 1
+XPath: //div[@id='parent1']/descendant-or-self::div
+
+HTML:
+
+<div id="parent1">
+    <div id="child1">Nội dung 1</div>
+    <div id="child2">Nội dung 2</div>
+</div>
+
+Trả lời: Chọn các phần tử div có id="child1" và id="child2" và chính nó với id="parent1"
+
+/---------
+
+Ví dụ 2
+XPath: //div[@id='grandparent2']/descendant-or-self::span
+
+HTML:
+
+<div id="grandparent2">
+    <div id="parent2">
+        <span id="child2-1">Nội dung 2-1</span>
+        <span id="child2-2">Nội dung 2-2</span>
+    </div>
+</div>
+
+Trả lời: Chọn các phần tử span có id="child2-1" và id="child2-2"
+
+/--------
+
+Ví dụ 3
+XPath: //div[@id='grandparent3']/descendant-or-self::p
+
+HTML:
+
+<div id="grandparent3">
+    <div id="parent3">
+        <p id="child3-1">Nội dung 3-1</p>
+        <p id="child3-2">Nội dung 3-2</p>
+    </div>
+</div>
+
+Trả lời: Chọn các phần tử p có id="child3-1" và id="child3-2"
+
+

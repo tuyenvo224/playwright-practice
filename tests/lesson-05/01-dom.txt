@@ -1,0 +1,78 @@
+﻿1. Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+
+Cấu trúc DOM cơ bản của một trang web bao gồm:
+
+- <!DOCTYPE html>   : Khai báo loại tài liệu HTML
+- <html>            : Thẻ gốc (root element) chứa toàn bộ nội dung trang web 
+  - <head>          : Chứa thông tin metadata, tiêu đề, liên kết CSS/JS
+    - <meta>        : Thông tin meta (charset, viewport, ...)
+    - <title>       : Tiêu đề trang hiển thị trên tab trình duyệt
+    - <link>        : Liên kết đến file CSS
+    - <script>      : Nhúng hoặc liên kết file JavaScript
+  - <body>          : Chứa toàn bộ nội dung hiển thị của trang web
+    - <header>      : Phần đầu trang (logo, navigation)
+    - <main>        : Nội dung chính
+    - <footer>      : Phần cuối trang
+
+Ví dụ:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Trang web</title>
+  </head>
+  <body>
+    <h1>Tiêu đề</h1>
+    <p>Nội dung</p>
+  </body>
+</html>
+
+---
+
+2. Hãy mô tả cấu trúc HTML của 1 bảng (table)
+
+Cấu trúc HTML của một bảng gồm các thẻ:
+
+- <table>           : Thẻ bao ngoài, khai báo bảng
+  - <thead>         : Phần đầu bảng (chứa hàng tiêu đề)
+    - <tr>          : Hàng (table row)
+      - <th>        : Ô tiêu đề (table header) - mặc định in đậm, căn giữa
+  - <tbody>         : Phần thân bảng (chứa dữ liệu)
+    - <tr>          : Hàng dữ liệu
+      - <td>        : Ô dữ liệu (table data)
+  - <tfoot>         : Phần cuối bảng (tùy chọn, thường chứa tổng kết)
+    - <tr>
+      - <td>
+
+Ví dụ:
+<table>
+  <thead>
+    <tr>
+      <th>Họ tên</th>
+      <th>Tuổi</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nguyễn Văn A</td>
+      <td>25</td>
+      <td>a@example.com</td>
+    </tr>
+    <tr>
+      <td>Trần Thị B</td>
+      <td>30</td>
+      <td>b@example.com</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Tổng: 2 người</td>
+    </tr>
+  </tfoot>
+</table>
+
+Các thuộc tính thường dùng:
+- colspan : Gộp nhiều cột
+- rowspan : Gộp nhiều hàng
+- border  : Viền bảng (thường dùng CSS thay thế)

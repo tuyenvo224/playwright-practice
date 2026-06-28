@@ -1,0 +1,100 @@
+https://material.playwrightvn.com/10-xpath-following-sibling.html
+
+Ví dụ về XPath Axe Methods: following và following-sibling
+
+1. following
+Chọn tất cả mọi thứ trong tài liệu sau thẻ đóng của nút hiện tại:
+
+Ví dụ 1
+XPath: //div[@id='current1']/following::div
+
+HTML:
+
+<div id="wrapper1">
+    <div id="current1">Nội dung hiện tại 1</div>
+    <div id="sibling1-1">Anh chị em sau 1-1</div>
+</div>
+<div id="following1-1">Nội dung sau 1-1</div>
+<div id="following1-2">Nội dung sau 1-2</div>
+
+Trả lời: Chọn các phần tử div có id="sibling1-1" và id="following1-1" và id="following1-2"
+
+/-----------
+
+Ví dụ 2
+XPath: //span[@id='current2']/following::div
+
+HTML:
+
+<div id="wrapper2">
+    <span id="current2">Nội dung hiện tại 2</span>
+    <div id="sibling2-1">Anh chị em sau 2-1</div>
+</div>
+<div id="following2-1">Nội dung sau 2-1</div>
+<div id="following2-2">Nội dung sau 2-2</div>
+
+Trả lời: Chọn các phần tử div có id="sibling2-1" và id="following2-1" và id="following2-2"
+
+/-----------
+
+Ví dụ 3
+XPath: //p[@id='current3']/following::span
+
+HTML:
+
+<div id="wrapper3">
+    <p id="current3">Nội dung hiện tại 3</p>
+    <span id="sibling3-1">Anh chị em sau 3-1</span>
+</div>
+<span id="following3-1">Nội dung sau 3-1</span>
+<span id="following3-2">Nội dung sau 3-2</span>
+
+Trả lời: Chọn các phần tử span có id="sibling3-1" và id="following3-1" và id="following3-2"
+
+/-----------
+
+2. following-sibling
+Chọn tất cả anh chị em sau nút hiện tại:
+
+Ví dụ 1
+XPath: //div[@id='current1']/following-sibling::div
+
+HTML:
+
+<div id="wrapper1">
+    <div id="current1">Nội dung hiện tại 1</div>
+    <div id="sibling1-1">Anh chị em sau 1-1</div>
+    <div id="sibling1-2">Anh chị em sau 1-2</div>
+</div>
+
+Trả lời: Chọn các phần tử div có id="sibling1-1" và id="sibling1-2"
+
+/-----------
+
+Ví dụ 2
+XPath: //span[@id='current2']/following-sibling::span
+
+HTML:
+
+<div id="wrapper2">
+    <span id="current2">Nội dung hiện tại 2</span>
+    <span id="sibling2-1">Anh chị em sau 2-1</span>
+    <span id="sibling2-2">Anh chị em sau 2-2</span>
+</div>
+
+Trả lời: Chọn các phần tử span có id="sibling2-1" và id="sibling2-2"
+
+/-----------
+
+Ví dụ 3
+XPath: //p[@id='current3']/following-sibling::p
+
+HTML:
+
+<div id="wrapper3">
+    <p id="current3">Nội dung hiện tại 3</p>
+    <p id="sibling3-1">Anh chị em sau 3-1</p>
+    <p id="sibling3-2">Anh chị em sau 3-2</p>
+</div>
+
+Trả lời: Chọn các phần tử p có id="sibling3-1" và id="sibling3-2"

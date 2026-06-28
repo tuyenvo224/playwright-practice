@@ -1,0 +1,103 @@
+https://material.playwrightvn.com/11-xpath-preceding-sibling.html
+
+Ví dụ về XPath Axe Methods: preceding và preceding-sibling
+
+1. preceding
+Chọn tất cả các nút xuất hiện trước nút hiện tại trong tài liệu, trừ tổ tiên, các nút thuộc tính và các nút namespace:
+
+Ví dụ 1
+XPath: //div[@id='current1']/preceding::div
+
+HTML:
+
+<div id="preceding1-1">Nội dung trước 1-1</div>
+<div id="preceding1-2">Nội dung trước 1-2</div>
+<div id="wrapper1">
+    <div id="current1">Nội dung hiện tại 1</div>
+    <div id="sibling1-1">Anh chị em sau 1-1</div>
+</div>
+
+Trả lời: Chọn các phần tử div có id="preceding1-2" và id="preceding1-1"
+
+/-----------
+
+Ví dụ 2
+XPath: //span[@id='current2']/preceding::div
+
+HTML:
+
+<div id="preceding2-1">Nội dung trước 2-1</div>
+<div id="preceding2-2">Nội dung trước 2-2</div>
+<div id="wrapper2">
+    <span id="current2">Nội dung hiện tại 2</span>
+    <div id="sibling2-1">Anh chị em sau 2-1</div>
+</div>
+
+Trả lời: Chọn các phần tử div có id="preceding2-2" và id="preceding2-1"
+
+/-----------
+
+Ví dụ 3
+XPath: //p[@id='current3']/preceding::span
+
+HTML:
+
+<span id="preceding3-1">Nội dung trước 3-1</span>
+<span id="preceding3-2">Nội dung trước 3-2</span>
+<div id="wrapper3">
+    <p id="current3">Nội dung hiện tại 3</p>
+    <span id="sibling3-1">Anh chị em sau 3-1</span>
+</div>
+
+Trả lời: Chọn các phần tử span có id="preceding3-2" và id="preceding3-1"
+
+/-----------
+
+2. preceding-sibling
+Chọn tất cả anh chị em trước nút hiện tại:
+
+Ví dụ 1
+XPath: //div[@id='current1']/preceding-sibling::div
+
+HTML:
+
+<div id="wrapper1">
+    <div id="sibling1-1">Anh chị em trước 1-1</div>
+    <div id="sibling1-2">Anh chị em trước 1-2</div>
+    <div id="current1">Nội dung hiện tại 1</div>
+    <div id="sibling1-3">Anh chị em sau 1-1</div>
+</div>
+
+Trả lời: Chọn các phần tử div có id="sibling1-2" và id="sibling1-1"
+
+/-----------
+
+Ví dụ 2
+XPath: //span[@id='current2']/preceding-sibling::span
+
+HTML:
+
+<div id="wrapper2">
+    <span id="sibling2-1">Anh chị em trước 2-1</span>
+    <span id="sibling2-2">Anh chị em trước 2-2</span>
+    <span id="current2">Nội dung hiện tại 2</span>
+    <span id="sibling2-3">Anh chị em sau 2-1</span>
+</div>
+
+Trả lời: Chọn các phần tử span có id="sibling2-2" và id="sibling2-1"
+
+/-----------
+
+Ví dụ 3
+XPath: //p[@id='current3']/preceding-sibling::p
+
+HTML:
+
+<div id="wrapper3">
+    <p id="sibling3-1">Anh chị em trước 3-1</p>
+    <p id="sibling3-2">Anh chị em trước 3-2</p>
+    <p id="current3">Nội dung hiện tại 3</p>
+    <p id="sibling3-3">Anh chị em sau 3-1</p>
+</div>
+
+Trả lời: Chọn các phần tử p có id="sibling3-2" và id="sibling3-1"

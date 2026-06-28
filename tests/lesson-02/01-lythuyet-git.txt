@@ -1,0 +1,5 @@
+Câu 1:
+git init : là câu lệnh dùng để khởi tạo 3 vùng git: working directory, staging area, repository
+git add <file_name> : là câu lệnh dùng để add 1 hay nhiều file cụ thể từ vùng working directory vào vùng staging area
+git add . : là câu lệnh dùng dể add toàn bộ file từ vùng working directory vào vùng staging area
+git commit -m "message" : là câu lệnh dùng để commit các file từ vùng staging area vào vùng repository

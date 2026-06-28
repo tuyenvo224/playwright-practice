@@ -1,0 +1,39 @@
+a. Các phần tử con:
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required="">
+
+b. Các phần tử cha: 
+<form id="registrationForm">
+
+c. Các phần tử hậu duệ (descendant):
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required="">
+
+d. Các phần từ tổ tiên (ancestor):
+<form id="registrationForm">
+
+e. Các phần tử anh em (sibling):
+<div class="form-group" id="parent">
+<div class="form-group">
+<div class="form-group">
+<div class="form-group">
+
+f. Các phần tử phía sau (following):
+div (gender) + toàn bộ con cháu bên trong (label, div, input, label, ...)
+div (hobbies) + toàn bộ con cháu bên trong (label, div, input, label, ...)
+div (submit) + button bên trong
+
+
+g. Các phần tử phía trước (preceding):
+<div class="form-group" id="parent">
+<label for="username" id="preceding">Username:</label>
+ <input type="text" id="username" name="username" required="">
+
+h. Các phần tử anh em phía sau cùng cấp (following-sibling):
+<div class="form-group">
+<div class="form-group">
+<div class="form-group">
+
+i. Các phần tử anh em phía trước cùng cấp (preceding-sibling):
+<div class="form-group" id="parent">
+   
