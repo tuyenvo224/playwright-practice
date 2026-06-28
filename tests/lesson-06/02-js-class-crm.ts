@@ -1,6 +1,6 @@
-//  npx tsx <ten_file>
-// npx ts-node <ten_file>
-// npx tsc <ten_file>
+//  npx tsx <file_path>
+// npx ts-node <file_path>
+// npx tsc <file_path> -> để biên dịch file ts thành file js, sau đó chạy bằng lệnh node  <file_path>
 
 class Customer {
     id: number;
